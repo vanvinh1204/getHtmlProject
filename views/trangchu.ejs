@@ -10,8 +10,17 @@
     <script src="main.js"></script>
 </head>
 <body>
-    <% html.each(function(i,e){ %>
-        <h1> <%= $(this).text() %> </h1>
-    <% }); %>
+    <div >
+        <div style="float: left;">
+        <% listName.each(function(i,e){ %>
+            <h1> <%= $(this).text() %> </h1>
+        <% }); %>
+        </div>  
+        <div style="float: left;">
+        <% listPrice.each(function(i,e){ %>
+            <h1> <%= $(this).text() %> </h1>
+        <% }); %>
+        </div>
+    </div>
 </body>
 </html>

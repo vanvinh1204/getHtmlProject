@@ -17,7 +17,8 @@ app.get("/", function(req,res){
         }else{
             
             $ = cheerio.load(body);
-            var ds = $(body).find("span.title");
+            var dsTitle = $(body).find("span.title");
+            var dsFinalsale = $(body).find("span.final-price");
 
             // ds.each(function(i,e){
             //     //console.log($(this).text());
@@ -27,7 +28,7 @@ app.get("/", function(req,res){
             // // console.log(ds);
 
              //res.render("trangchu",{html:body});
-             res.render("trangchu",{html:ds});
+             res.render("trangchu",{listName:dsTitle, listPrice:dsFinalsale});
             
 
         }
